@@ -6,17 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class Connexion extends AppCompatActivity {
-    private Button Inscrip;
-    private Button Connexion;
+    private Button Inscrip,Connexion;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
+
         Inscrip = findViewById(R.id.button3);
-        Inscrip =(Button) findViewById(R.id.button3);
+        Inscrip = (Button) findViewById(R.id.button3);
         Inscrip.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -40,4 +42,5 @@ public class Connexion extends AppCompatActivity {
         Intent intent2 = new Intent(this, Menu.class);
         startActivity(intent2);
     }
+
 }

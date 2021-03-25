@@ -2,6 +2,7 @@
 package org.libreapps.projetino;
 
 import android.util.Log;
+import android.os.AsyncTask;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,9 +16,23 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class ConnectionRest {
-    private final static String URL = "https://api.munier.me/admin/db.php";
+public class ConnectionRest extends AsyncTask<String,Void,String> {
+    private final static String URL = "https://api.munier.me/jwt/";
     private JSONObject jsonObj = null;
+    private String token = null;
+
+    public String doInBackground(String... strings) {
+        try{
+            return get(strings[0]);
+
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public String get(String methode) throws IOException, JSONException {
         String url = URL;
         InputStream is = null;
@@ -30,7 +45,7 @@ public class ConnectionRest {
             if(methode.equals("PUT")){
                 jsonObj.remove("id");
             }
-            parameters  = "data="+ URLEncoder.encode(jsonObj.toString(), "utf-8");
+            parameters  = "data="+URLEncoder.encode(jsonObj.toString(), "utf-8");
             Log.v("URL", url+" "+parameters);
         }
         try {
@@ -68,5 +83,10 @@ public class ConnectionRest {
             response.append(line).append('\n');
         }
         return response.toString();
+    }
+    public void setJsonObj(JSONObject jsonObj){this.jsonObj = jsonObj;}
+    @Override
+    protected void onPostExecute(String s) {
+        super.onPostExecute(s);
     }
 }
