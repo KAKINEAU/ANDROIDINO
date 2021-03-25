@@ -19,7 +19,7 @@ import java.net.URLEncoder;
 public class ConnectionRest extends AsyncTask<String,Void,String> {
     private final static String URL = "https://api.munier.me/jwt/";
     private JSONObject jsonObj = null;
-    private String token = null;
+    private String token = null, action = "connecter";
 
     public String doInBackground(String... strings) {
         try{
@@ -85,6 +85,7 @@ public class ConnectionRest extends AsyncTask<String,Void,String> {
         return response.toString();
     }
     public void setJsonObj(JSONObject jsonObj){this.jsonObj = jsonObj;}
+    public void setAction(String monAction){ this.action = monAction;}
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);

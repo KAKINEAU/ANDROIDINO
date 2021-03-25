@@ -7,7 +7,7 @@
     tools:context=".Connexion">
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/connexion_email"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -17,7 +17,7 @@
         android:layout_marginRight="10dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="Email"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.51"
@@ -35,7 +35,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/mot_de_passe"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_marginStart="10dp"
@@ -47,7 +47,7 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/connexion_email" />
 
     <CheckBox
         android:id="@+id/checkBox"
@@ -55,7 +55,7 @@
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
         android:text="Se souvenir de moi"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/mot_de_passe"
         tools:layout_editor_absoluteX="31dp" />
 
     <Button
