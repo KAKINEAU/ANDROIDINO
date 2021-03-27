@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetIno">
-
-        <activity android:name=".Menu"></activity>
+        <activity
+            android:name=".Mes_recettes"
+            android:label="@string/title_activity_mes_recettes"></activity>
+        <activity android:name=".Menu" />
         <activity android:name=".inscription" />
         <activity android:name=".Connexion" />
         <activity android:name=".AUrevoir" />
@@ -22,4 +24,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
