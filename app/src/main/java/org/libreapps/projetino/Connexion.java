@@ -31,7 +31,7 @@ public class Connexion extends AppCompatActivity {
         Connexion_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
+
                 try {
                     JSONObject jAuth = new JSONObject();
                     jAuth.put("email", userEmail.getText().toString());
@@ -57,7 +57,7 @@ public class Connexion extends AppCompatActivity {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
                     e.printStackTrace();
-                }*/
+                }
                 openactivity_Menu();
             }
         });

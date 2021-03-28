@@ -27,7 +27,7 @@ public class inscription extends AppCompatActivity {
         user_name = (EditText) findViewById(R.id.reg_user_name);
         user_password = (EditText) findViewById(R.id.reg_user_password);
 
-        /*reg_create.setOnClickListener(new View.OnClickListener(){
+        reg_create.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 try {
@@ -57,6 +57,6 @@ public class inscription extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }
-        });*/
+        });
     }
 }
