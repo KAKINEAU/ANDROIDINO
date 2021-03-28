@@ -17,6 +17,7 @@ import java.util.concurrent.ExecutionException;
 public class inscription extends AppCompatActivity {
     private EditText user_email, nom_complet,user_password,user_name;
     private Button reg_create;
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

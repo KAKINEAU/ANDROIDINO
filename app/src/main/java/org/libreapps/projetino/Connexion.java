@@ -17,6 +17,7 @@ import java.util.concurrent.ExecutionException;
 public class Connexion extends AppCompatActivity {
     private Button Inscrip,Connexion_Button;
     private EditText userEmail,userPassword;
+    String token;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,10 +73,12 @@ public class Connexion extends AppCompatActivity {
     }
     public void openactivity_connexion(){
         Intent intent1 = new Intent(this, inscription.class);
+        intent1.putExtra("token", token);
         startActivity(intent1);
     }
     public void openactivity_Menu(){
         Intent intent = new Intent (this, Menu.class);
+        intent.putExtra("token", token);
         startActivity(intent);
     }
 }

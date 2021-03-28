@@ -9,6 +9,7 @@ import android.widget.Button;
 
 public class accueil extends AppCompatActivity {
     private Button Suivant;
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,7 @@ public class accueil extends AppCompatActivity {
 
     public void openPage_Connection(){
         Intent intent = new Intent(this, Connexion.class);
+        intent.putExtra("token", token);
         startActivity(intent);
     }
 }
