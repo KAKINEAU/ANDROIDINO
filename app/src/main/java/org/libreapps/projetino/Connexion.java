@@ -30,6 +30,7 @@ public class Connexion extends AppCompatActivity {
         Connexion_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
                 try {
                     JSONObject jAuth = new JSONObject();
                     jAuth.put("email", userEmail.getText().toString());
@@ -45,7 +46,7 @@ public class Connexion extends AppCompatActivity {
                     if(token.charAt(0)=='{') {
                         Log.v("LoginActivity", token);
                     }else{
-                        Intent intent = new Intent(Connexion.this, accueil.class);
+                        Intent intent = new Intent(Connexion.this, Menu.class);
                         intent.putExtra("token", token);
                         startActivity(intent);
                     }
@@ -55,13 +56,13 @@ public class Connexion extends AppCompatActivity {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
                     e.printStackTrace();
-                }
+                }*/
+                openactivity_Menu();
             }
         });
 
-        Inscrip = (Button)findViewById(R.id.button3);
-        Inscrip = findViewById(R.id.button3);
         Inscrip = (Button) findViewById(R.id.button3);
+        Inscrip = findViewById(R.id.button3);
         Inscrip.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -73,5 +74,8 @@ public class Connexion extends AppCompatActivity {
         Intent intent1 = new Intent(this, inscription.class);
         startActivity(intent1);
     }
-
+    public void openactivity_Menu(){
+        Intent intent = new Intent (this, Menu.class);
+        startActivity(intent);
+    }
 }
