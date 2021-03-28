@@ -9,21 +9,35 @@ import android.widget.Button;
 
 public class Menu extends AppCompatActivity {
     private Button Deconnexion;
+    private Button Mes_recettes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        //transition page de déconnexion
         Deconnexion = findViewById(R.id.button9);
-        Deconnexion =(Button) findViewById(R.id.button9);
         Deconnexion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                opena_urevoir();
+                Intent intent = new Intent(Menu.this, AUrevoir.class);
+                startActivity(intent);
             }
         });
+
+        //transition page de mes recettes
+        Mes_recettes = findViewById(R.id.button6);
+        Mes_recettes.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Mes_recettes.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
-    public void opena_urevoir(){
-        Intent intent3 = new Intent(this, AUrevoir.class);
-        startActivity(intent3);
-    }
+
 }
