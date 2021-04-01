@@ -36,8 +36,7 @@ public class Connexion extends AppCompatActivity {
                     JSONObject jAuth = new JSONObject();
                     jAuth.put("email", userEmail.getText().toString());
                     jAuth.put("password", userPassword.getText().toString());
-                    jAuth.put("app", "MNA-1A-5U-227");
-
+                    jAuth.put("app", "MNA");
                     Log.v("LoginActivity", userEmail.getText().toString()+" "+userPassword.getText().toString());
                     ConnectionRest connectionRest = new ConnectionRest();
                     connectionRest.setJsonObj(jAuth);
@@ -72,12 +71,12 @@ public class Connexion extends AppCompatActivity {
         });
     }
     public void openactivity_connexion(){
-        Intent intent1 = new Intent(this, inscription.class);
+        Intent intent1 = new Intent(Connexion.this, inscription.class);
         intent1.putExtra("token", token);
         startActivity(intent1);
     }
     public void openactivity_Menu(){
-        Intent intent = new Intent (this, Menu.class);
+        Intent intent = new Intent (Connexion.this, Menu.class);
         intent.putExtra("token", token);
         startActivity(intent);
     }

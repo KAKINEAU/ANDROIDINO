@@ -22,10 +22,13 @@ public class inscription extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inscription);
+        token = getIntent().getStringExtra("token");
+
         user_email = (EditText) findViewById(R.id.email_address);
         nom_complet = (EditText) findViewById(R.id.nomcomplet);
         user_name = (EditText) findViewById(R.id.reg_user_name);
         user_password = (EditText) findViewById(R.id.reg_user_password);
+        reg_create = (Button) findViewById(R.id.reg_create);
 
         reg_create.setOnClickListener(new View.OnClickListener(){
             @Override

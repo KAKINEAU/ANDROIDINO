@@ -60,7 +60,8 @@
         android:text="Nom complet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="231dp" />
+        tools:layout_editor_absoluteY="231dp"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/reg_user_name"
