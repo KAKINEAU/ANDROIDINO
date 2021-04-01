@@ -24,7 +24,6 @@ public class ConnectionRest extends AsyncTask<String,Void,String> {
     public String doInBackground(String... strings) {
         try{
             return get(strings[0]);
-
         }catch(IOException e){
             e.printStackTrace();
         }catch (JSONException e){
@@ -38,7 +37,7 @@ public class ConnectionRest extends AsyncTask<String,Void,String> {
         InputStream is = null;
         String parameters = "";
         Log.v("methode", methode);
-        if(!methode.equals("POST")&&(jsonObj!=null)){
+        if(!methode.equals("POST")&&(jsonObj!=null)&&!methode.equals("CREATE_USER")){
             url += jsonObj.getInt("id");
         }
         if(jsonObj != null){
@@ -47,6 +46,10 @@ public class ConnectionRest extends AsyncTask<String,Void,String> {
             }
             parameters  = "data="+URLEncoder.encode(jsonObj.toString(), "utf-8");
             Log.v("URL", url+" "+parameters);
+        }
+        if(methode.equals("CREATE_USER")){
+            url = URL + "register.php";
+            methode = "POST";
         }
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();

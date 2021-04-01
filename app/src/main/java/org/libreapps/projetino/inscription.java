@@ -15,7 +15,7 @@ import org.json.JSONObject;
 import java.util.concurrent.ExecutionException;
 
 public class inscription extends AppCompatActivity {
-    private EditText user_email, nom_complet,user_password,user_name;
+    private EditText user_email, nom_complet,user_password;
     private Button reg_creat;
     String token;
     @Override
@@ -26,7 +26,6 @@ public class inscription extends AppCompatActivity {
 
         user_email = (EditText) findViewById(R.id.email_address);
         nom_complet = (EditText) findViewById(R.id.nomcomplet);
-        user_name = (EditText) findViewById(R.id.reg_user_name);
         user_password = (EditText) findViewById(R.id.reg_user_password);
         reg_creat = (Button) findViewById(R.id.reg_create);
 
@@ -37,7 +36,6 @@ public class inscription extends AppCompatActivity {
                     ConnectionRest connectionRest = new ConnectionRest();
                     JSONObject jsonAuthentification = new JSONObject();
                     jsonAuthentification.put("name", nom_complet.getText());
-                    jsonAuthentification.put("nom complet",nom_complet.getText());
                     jsonAuthentification.put("email",user_email.getText());
                     jsonAuthentification.put("pasword",user_password.getText());
                     jsonAuthentification.put("licence","MNA-1A-5U-227");
@@ -48,7 +46,7 @@ public class inscription extends AppCompatActivity {
                     if(token.charAt(0)=='{'){
                         Log.v("LoginActivity",token);
                     }else{
-                        Intent intent = new Intent(inscription.this,accueil.class);
+                        Intent intent = new Intent(inscription.this, Menu.class);
                         intent.putExtra("token",token);
                         startActivity(intent);
                     }
