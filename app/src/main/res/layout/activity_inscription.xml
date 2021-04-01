@@ -26,6 +26,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:ems="10"
+        android:hint="Email"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
@@ -42,6 +43,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:ems="10"
+        android:hint="Mot de passe"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,12 +58,12 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:ems="10"
+        android:hint="Nom complet"
         android:inputType="textPersonName"
-        android:text="Nom complet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="231dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="231dp" />
 
     <EditText
         android:id="@+id/reg_user_name"
@@ -73,8 +75,8 @@
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:ems="10"
+        android:hint="Nom utilisateur"
         android:inputType="textPersonName"
-        android:text="Nom d'utilisateur"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"

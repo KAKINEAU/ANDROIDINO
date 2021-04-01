@@ -28,6 +28,10 @@ public class Connexion extends AppCompatActivity {
         userPassword = (EditText)findViewById(R.id.mot_de_passe);
         Connexion_Button = (Button)findViewById(R.id.button2);
 
+        userEmail.setText("victor.li@esme.fr"); //TODO Dev
+        userPassword.setText( "0618502438Li"); //TODO Dev
+
+
         Connexion_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,9 +50,8 @@ public class Connexion extends AppCompatActivity {
                     if(token.charAt(0)=='{') {
                         Log.v("LoginActivity", token);
                     }else{
-                        Intent intent = new Intent(Connexion.this, Menu.class);
-                        intent.putExtra("token", token);
-                        startActivity(intent);
+                        Log.v("token", token);
+                        openactivity_Menu();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -57,7 +60,7 @@ public class Connexion extends AppCompatActivity {
                 } catch (ExecutionException e) {
                     e.printStackTrace();
                 }
-                openactivity_Menu();
+
             }
         });
 

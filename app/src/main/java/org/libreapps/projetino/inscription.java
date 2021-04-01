@@ -16,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 
 public class inscription extends AppCompatActivity {
     private EditText user_email, nom_complet,user_password,user_name;
-    private Button reg_create;
+    private Button reg_creat;
     String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +28,9 @@ public class inscription extends AppCompatActivity {
         nom_complet = (EditText) findViewById(R.id.nomcomplet);
         user_name = (EditText) findViewById(R.id.reg_user_name);
         user_password = (EditText) findViewById(R.id.reg_user_password);
-        reg_create = (Button) findViewById(R.id.reg_create);
+        reg_creat = (Button) findViewById(R.id.reg_create);
 
-        reg_create.setOnClickListener(new View.OnClickListener(){
+        reg_creat.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 try {

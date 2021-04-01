@@ -34,7 +34,7 @@ public class ConnectionRest extends AsyncTask<String,Void,String> {
     }
 
     public String get(String methode) throws IOException, JSONException {
-        String url = URL;
+        String url = URL + action + "/";
         InputStream is = null;
         String parameters = "";
         Log.v("methode", methode);
