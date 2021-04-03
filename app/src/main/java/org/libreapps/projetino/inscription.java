@@ -1,13 +1,20 @@
 package org.libreapps.projetino;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -59,5 +66,24 @@ public class inscription extends AppCompatActivity {
                 }
             }
         });
+
+            //rendre le text clickable début
+        TextView textView = findViewById(R.id.textcompte);
+        String text ="Vous avez un compte ?  Connectez-vous";
+        SpannableString ss= new SpannableString(text);
+
+        ClickableSpan clickableSpan1 = new ClickableSpan() {
+            @Override
+            public void onClick( View widget) {
+               // Toast.makeText(inscription.this, "", Toast.LENGTH_SHORT).show();
+                    Intent intent1 = new Intent(inscription.this, Connexion.class);
+
+                    startActivity(intent1);
+                }
+        };
+        ss.setSpan(clickableSpan1,22,37, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        textView.setText(ss);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+            //rendre le text clickable FIN
     }
 }

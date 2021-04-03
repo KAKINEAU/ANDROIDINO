@@ -76,12 +76,15 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView4"
+
+        android:id="@+id/textcompte"
+
         android:layout_width="257dp"
         android:layout_height="71dp"
         android:layout_marginTop="28dp"
         android:layout_marginBottom="3dp"
         android:text="Vous avez un compte ?  Connectez-vous"
+
         app:layout_constraintBottom_toTopOf="@+id/reg_create"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
