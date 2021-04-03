@@ -14,7 +14,8 @@ import org.json.JSONObject;
 
 import java.util.concurrent.ExecutionException;
 
-public class Connexion extends AppCompatActivity {
+public class
+Connexion extends AppCompatActivity {
     private Button Inscrip,Connexion_Button;
     private EditText userEmail,userPassword;
     String token;
