@@ -9,9 +9,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Menu extends AppCompatActivity {
-    private Button Deconnexion;
-    private Button Mes_recettes;
-    private Button compte;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +16,7 @@ public class Menu extends AppCompatActivity {
        setContentView(R.layout.activity_menu);
 
         //transition page de déconnexion
-        Deconnexion = findViewById(R.id.button9);
+        Button Deconnexion = findViewById(R.id.button9);
         Deconnexion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -29,7 +26,7 @@ public class Menu extends AppCompatActivity {
         });
 
         //transition page de mes recettes
-        Mes_recettes = findViewById(R.id.button6);
+        Button Mes_recettes = findViewById(R.id.button6);
         Mes_recettes.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -39,7 +36,7 @@ public class Menu extends AppCompatActivity {
         });
 
         //transition page de mon compte
-        compte = findViewById(R.id.buttoncompte);
+        Button compte = findViewById(R.id.buttoncompte);
         compte.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -48,7 +45,35 @@ public class Menu extends AppCompatActivity {
             }
         });
 
+        //transition page recettes de saison
+        Button recettes_de_saison = findViewById(R.id.button5);
+        recettes_de_saison.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Recettes_de_saison.class);
+                startActivity(intent);
+            }
+        });
 
+        //transition page découvrir
+        Button découvrir = findViewById(R.id.button8);
+        découvrir.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Decouvrir.class);
+                startActivity(intent);
+            }
+        });
+
+        //transition page mes ingrédients
+        Button ingrédients = findViewById(R.id.button7);
+        ingrédients.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Menu.this, Mes_ingredients.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

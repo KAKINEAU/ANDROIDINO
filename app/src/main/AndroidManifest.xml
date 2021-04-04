@@ -7,25 +7,24 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="FOODSTA"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:theme="@style/Theme.ProjetIno">
-
-        <activity android:name=".ajouter_Recette"/>
-        <activity android:name=".Mon_Compte"/>
-        <activity android:name=".Profile"/>
-        <activity
-            android:name=".Mes_recettes"
-        />
-        <activity android:name=".Menu"/>
-        <activity android:name=".inscription"/>
-        <activity android:name=".Connexion"/>
-        <activity android:name=".AUrevoir"/>
+        <activity android:name=".Mes_ingredients"></activity>
+        <activity android:name=".Decouvrir" />
+        <activity android:name=".Recettes_de_saison" />
+        <activity android:name=".ajouter_Recette" />
+        <activity android:name=".Mon_Compte" />
+        <activity android:name=".Profile" />
+        <activity android:name=".Mes_recettes" />
+        <activity android:name=".Menu" />
+        <activity android:name=".inscription" />
+        <activity android:name=".Connexion" />
+        <activity android:name=".AUrevoir" />
         <activity android:name=".accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
