@@ -22,7 +22,7 @@ import org.json.JSONObject;
 import java.util.concurrent.ExecutionException;
 
 public class inscription extends AppCompatActivity {
-    private EditText user_email, nom_complet,user_password;
+    private EditText user_email, nom_complet,user_password,verif_password;
     private Button reg_creat;
     String token;
     @Override
@@ -34,6 +34,8 @@ public class inscription extends AppCompatActivity {
         user_email = (EditText) findViewById(R.id.email_address);
         nom_complet = (EditText) findViewById(R.id.nomcomplet);
         user_password = (EditText) findViewById(R.id.reg_user_password);
+        verif_password = (EditText) findViewById(R.id.VerifMotDePasse);
+
         reg_creat = (Button) findViewById(R.id.reg_create);
 
         reg_creat.setOnClickListener(new View.OnClickListener(){
@@ -45,6 +47,7 @@ public class inscription extends AppCompatActivity {
                     jsonAuthentification.put("name", nom_complet.getText());
                     jsonAuthentification.put("email",user_email.getText());
                     jsonAuthentification.put("pasword",user_password.getText());
+                    jsonAuthentification.put("pasword2",verif_password.getText());
                     jsonAuthentification.put("licence","MNA-1A-5U-227");
                     connectionRest.setJsonObj(jsonAuthentification);
                     connectionRest.execute("CREATE_USER");

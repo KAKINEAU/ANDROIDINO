@@ -17,10 +17,6 @@ public class Recettes_de_saison extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recettes_de_saison);
 
-
-
-
-
             //transition page de recette
         ImageButton image = findViewById(R.id.imageButton3);
         image.setOnClickListener(new View.OnClickListener(){
