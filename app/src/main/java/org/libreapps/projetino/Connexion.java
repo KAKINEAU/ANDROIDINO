@@ -52,6 +52,7 @@ Connexion extends AppCompatActivity {
                         Log.v("LoginActivity", token);
                     }else{
                         Log.v("token", token);
+                        Log.v("connexion", "menu"+token);
                         openactivity_Menu();
                     }
                 } catch (JSONException e) {

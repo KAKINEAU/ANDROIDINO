@@ -4,12 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
 public class Menu extends AppCompatActivity {
-
+    String token;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,9 @@ public class Menu extends AppCompatActivity {
         Deconnexion.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                Log.v("token", "menu"+token);
                 Intent intent = new Intent(Menu.this, AUrevoir.class);
+                intent.putExtra("token", token);
                 startActivity(intent);
             }
         });
@@ -30,7 +33,9 @@ public class Menu extends AppCompatActivity {
         Mes_recettes.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                Log.v("token", "menu"+token);
                 Intent intent = new Intent(Menu.this, Mes_recettes.class);
+                intent.putExtra("token", token);
                 startActivity(intent);
             }
         });
@@ -41,6 +46,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Mon_Compte.class);
+                intent.putExtra("token", token);
                 startActivity(intent);
             }
         });

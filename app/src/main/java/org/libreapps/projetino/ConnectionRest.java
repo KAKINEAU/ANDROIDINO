@@ -89,6 +89,7 @@ public class ConnectionRest extends AsyncTask<String,Void,String> {
     }
     public void setJsonObj(JSONObject jsonObj){this.jsonObj = jsonObj;}
     public void setAction(String monAction){ this.action = monAction;}
+    public void setToken(String monToken) { this.token = monToken; }
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
