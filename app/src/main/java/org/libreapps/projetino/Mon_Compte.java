@@ -18,10 +18,15 @@ public class Mon_Compte extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mon__compte);
+        /*
         String nom_utilisateur = getIntent().getStringExtra("name");
+
         nom_Compte = (TextView) findViewById(R.id.nom_compte);
+
         nom_Compte.setText(nom_utilisateur);
+
         token = getIntent().getStringExtra("token");
+        */
         //transition page de déconnexion
         btthome = findViewById(R.id.button4);
         btthome.setOnClickListener(new View.OnClickListener(){

@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjetIno">
-        <activity android:name=".Mes_ingredients"></activity>
+        <activity android:name=".Fiche_Recette"></activity>
+        <activity android:name=".Recette" />
+        <activity android:name=".Mes_ingredients" />
         <activity android:name=".Decouvrir" />
         <activity android:name=".Recettes_de_saison" />
         <activity android:name=".ajouter_Recette" />
