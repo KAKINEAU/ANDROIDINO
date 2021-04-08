@@ -46,8 +46,8 @@ public class inscription extends AppCompatActivity {
                     JSONObject jsonAuthentification = new JSONObject();
                     jsonAuthentification.put("name", nom_complet.getText());
                     jsonAuthentification.put("email",user_email.getText());
-                    jsonAuthentification.put("pasword",user_password.getText());
-                    jsonAuthentification.put("pasword2",verif_password.getText());
+                    jsonAuthentification.put("password",user_password.getText());
+                    //jsonAuthentification.put("pasword2",verif_password.getText());
                     jsonAuthentification.put("licence","MNA-1A-5U-227");
                     connectionRest.setJsonObj(jsonAuthentification);
                     connectionRest.execute("CREATE_USER");
