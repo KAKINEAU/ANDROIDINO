@@ -22,7 +22,7 @@ public class Recettes_de_saison extends AppCompatActivity {
         image.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View view) {
-                    Intent intent = new Intent(Recettes_de_saison.this, ajouter_Recette.class);
+                    Intent intent = new Intent(Recettes_de_saison.this, Fiche_Recette.class);
                     startActivity(intent);
                 }
             });
@@ -31,7 +31,7 @@ public class Recettes_de_saison extends AppCompatActivity {
         image3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Recettes_de_saison.this, ajouter_Recette.class);
+                Intent intent = new Intent(Recettes_de_saison.this, Fiche_Recette.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +40,7 @@ public class Recettes_de_saison extends AppCompatActivity {
         image2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Recettes_de_saison.this, ajouter_Recette.class);
+                Intent intent = new Intent(Recettes_de_saison.this, Fiche_Recette.class);
                 startActivity(intent);
             }
         });

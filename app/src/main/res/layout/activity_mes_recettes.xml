@@ -6,56 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".Mes_recettes">
 
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mes recettes :"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:rotation="45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
     <ScrollView
         android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="330dp">
+        android:layout_width="407dp"
+        android:layout_height="675dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView10"
+            <ImageButton
+                android:id="@+id/imageButton8"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mes recettes :"
-                android:textSize="24sp" />
+                android:layout_height="150dp"
+                tools:srcCompat="@color/purple_200" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/fab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|end"
-                android:rotation="45"
-                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
-
-            <ImageView
-                android:id="@+id/imageView10"
+            <ImageButton
+                android:id="@+id/imageButton9"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/t_l_chargement" />
+                android:layout_height="150dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/imageView11"
+            <ImageButton
+                android:id="@+id/imageButton10"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/t_l_chargement2" />
+                android:layout_height="150dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/imageView12"
+            <ImageButton
+                android:id="@+id/imageButton11"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/t_l_chargement3" />
+                android:layout_height="150dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
-            <ImageView
-                android:id="@+id/imageView14"
+            <ImageButton
+                android:id="@+id/imageButton12"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/t_l_chargement" />
+                android:layout_height="150dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
         </LinearLayout>
     </ScrollView>
