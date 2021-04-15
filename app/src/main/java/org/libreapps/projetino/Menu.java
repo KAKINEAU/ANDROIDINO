@@ -14,7 +14,9 @@ public class Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_menu);
+        setContentView(R.layout.activity_menu);
+        token = getIntent().getStringExtra("token");
+        Log.v("token", "menu  "+token);
 
         //transition page de déconnexion
         Button Deconnexion = findViewById(R.id.button9);
@@ -33,7 +35,7 @@ public class Menu extends AppCompatActivity {
         Mes_recettes.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Log.v("token", "menu"+token);
+                Log.v("token", " "+token);
                 Intent intent = new Intent(Menu.this, Mes_recettes.class);
                 intent.putExtra("token", token);
                 startActivity(intent);

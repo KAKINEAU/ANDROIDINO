@@ -15,8 +15,12 @@ public class Mes_recettes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        token = getIntent().getStringExtra("token");
         setContentView(R.layout.activity_mes_recettes);
-        Log.v("token", "wesh gros"+token);
+        Log.v("token", " " + token);
+
+
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override

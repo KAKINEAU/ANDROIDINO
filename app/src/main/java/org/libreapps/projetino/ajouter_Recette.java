@@ -46,10 +46,16 @@ public class ajouter_Recette extends AppCompatActivity {
                     connectionRest.setToken(token);
                     connectionRest.setAction("recette");
                     connectionRest.execute("POST");
+                    String result = connectionRest.get();
+                    Log.v("result", " "+result);
                     Intent intent = new Intent(ajouter_Recette.this, Mes_recettes.class);
                     intent.putExtra("token", token);
                     //startActivity(intent);
                 } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
                     e.printStackTrace();
                 }
             }

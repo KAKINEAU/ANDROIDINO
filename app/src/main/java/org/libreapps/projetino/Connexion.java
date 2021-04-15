@@ -47,7 +47,7 @@ Connexion extends AppCompatActivity {
                     connectionRest.setJsonObj(jAuth);
                     connectionRest.setAction("auth");
                     connectionRest.execute("POST");
-                    String token = connectionRest.get();
+                    token = connectionRest.get();
                     if(token.charAt(0)=='{') {
                         Log.v("LoginActivity", token);
                     }else{
