@@ -36,7 +36,10 @@ public class Mes_recettes extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                intent.putExtra("token", token);
                 startActivity(intent);
+
+
             }
         });
     }

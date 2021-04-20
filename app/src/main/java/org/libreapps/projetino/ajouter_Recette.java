@@ -50,7 +50,7 @@ public class ajouter_Recette extends AppCompatActivity {
                     Log.v("result", " "+result);
                     Intent intent = new Intent(ajouter_Recette.this, Mes_recettes.class);
                     intent.putExtra("token", token);
-                    //startActivity(intent);
+                    startActivity(intent);
                 } catch (JSONException e) {
                     e.printStackTrace();
                 } catch (InterruptedException e) {

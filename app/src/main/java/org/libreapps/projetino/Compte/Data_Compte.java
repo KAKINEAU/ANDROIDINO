@@ -1,4 +1,4 @@
-package org.libreapps.projetino.Obj;
+package org.libreapps.projetino.Compte;
 
 import org.json.JSONObject;
 
