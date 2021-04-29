@@ -95,7 +95,7 @@ public class Mes_recettes extends AppCompatActivity {
                     }
                 });*/
 
-            }
+            }//vsrdvsrvbsrt
             return products;
         } catch (JSONException e) {
             Log.v("TAG","[JSONException] e : " + e.getMessage());
