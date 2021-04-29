@@ -17,4 +17,5 @@ public class Recette {
     public String getTemps(){ return temps;}
     public String getAuteur(){ return auteur;}
     public int getId(){ return id; }
+
 }
