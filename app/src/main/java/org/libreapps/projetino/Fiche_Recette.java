@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.EditText;
 import android.widget.TextView;
+
 
 public class Fiche_Recette extends AppCompatActivity {
     String token;
@@ -16,6 +16,18 @@ public class Fiche_Recette extends AppCompatActivity {
 
         token = getIntent().getStringExtra("token");
         Log.v("result", " "+token);
+
+        int id = getIntent().getIntExtra("id",0);
+        String name = getIntent().getStringExtra("auteur");
+        String temps= getIntent().getStringExtra("temps");
+
+        TextView auteur = (TextView) findViewById(R.id.textView39);
+        TextView tempspreparation = (TextView) findViewById(R.id.textView40);
+        if(id!=0){
+            auteur.setText(name);
+            tempspreparation.setText(temps);
+        }
+
 
 
     }
