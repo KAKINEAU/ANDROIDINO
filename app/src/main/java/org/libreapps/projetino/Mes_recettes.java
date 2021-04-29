@@ -23,11 +23,6 @@ public class Mes_recettes extends AppCompatActivity {
     ConnectionRest connectionRest;
     private ArrayList<Recette> listRecettes = new ArrayList<Recette>();
 
-    TextView auteur = (TextView) findViewById(R.id.textView39);
-    TextView tempspreparation = (TextView) findViewById(R.id.textView40);
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +58,7 @@ public class Mes_recettes extends AppCompatActivity {
             }
         });
 
-        ImageButton recette_N = findViewById(R.id.imageButton8);
+        /*ImageButton recette_N = findViewById(R.id.imageButton8);
 
         recette_N.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,12 +66,9 @@ public class Mes_recettes extends AppCompatActivity {
 
                 Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
                 intent.putExtra("token", token);
-
                 startActivity(intent);
-
-
             }
-        });
+        });*/
     }
 
     public ArrayList<Recette> parse(final String json) {
@@ -86,7 +78,20 @@ public class Mes_recettes extends AppCompatActivity {
             for (int i = 0; i < jProductArray.length(); i++) {
                 products.add(new Recette(jProductArray.optJSONObject(i)));
                 Log.v("TAG","[Auteur] : " + products.get(i).getAuteur()+" "+products.get(i).getId());
-                auteur.setText(products.get(i).getAuteur());
+
+                ImageButton recette_N = findViewById(R.id.imageButton8);
+
+                recette_N.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                        intent.putExtra("token", token);
+                        intent.putExtra("name",products.get(1).getAuteur());
+                        startActivity(intent);
+                    }
+                });
+
             }
             return products;
         } catch (JSONException e) {
