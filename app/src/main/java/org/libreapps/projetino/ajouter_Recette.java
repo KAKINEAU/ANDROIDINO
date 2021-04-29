@@ -42,6 +42,8 @@ public class ajouter_Recette extends AppCompatActivity {
                     Recette.put("temps", Temps.getText().toString());
                     Recette.put("auteur", Auteur.getText().toString());
 
+                    //TODO ne pas oublier de mettre les nouveaux paramètres dans la classe DATARecette/Recette
+
                     connectionRest.setJsonObj(Recette);
                     connectionRest.setToken(token);
                     connectionRest.setAction("recette");

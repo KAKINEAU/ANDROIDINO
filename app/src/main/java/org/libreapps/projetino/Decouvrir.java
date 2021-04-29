@@ -25,6 +25,6 @@ public class Decouvrir extends AppCompatActivity {
             }
         });
     }
-
+//TODO ajouter le même genre de chose que dans la mage mes recettes
 
 }

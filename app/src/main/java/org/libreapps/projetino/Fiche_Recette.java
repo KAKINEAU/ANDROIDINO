@@ -26,7 +26,7 @@ public class Fiche_Recette extends AppCompatActivity {
         auteur.setText(name);
         tempspreparation.setText(temps);
 
-
+//TODO on pourra ajouter des choses comme des commentaires ainsi que les différentes étapes de la cuisson
 
     }
 

@@ -45,9 +45,6 @@ public class Mes_recettes extends AppCompatActivity {
             e.printStackTrace();
         }
 
-
-
-
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,18 +57,19 @@ public class Mes_recettes extends AppCompatActivity {
 
         ImageButton recette_N = findViewById(R.id.imageButton8);
 
-                recette_N.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
+        recette_N.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-                        Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
-                        intent.putExtra("token", token);
-                        intent.putExtra("name",listRecettes.get(1).getAuteur());
-                        intent.putExtra("temps",listRecettes.get(1).getTemps());
-                        startActivity(intent);
-                    }
-                });
+                Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                intent.putExtra("token", token);
+                intent.putExtra("name",listRecettes.get(1).getAuteur());
+                intent.putExtra("temps",listRecettes.get(1).getTemps());
+                startActivity(intent);
+            }
+        });
     }
+    //TODO reprendre le même schéma pour envoyer une information dans la fiche recette
 
     public ArrayList<Recette> parse(final String json) {
         try {
@@ -80,22 +78,7 @@ public class Mes_recettes extends AppCompatActivity {
             for (int i = 0; i < jProductArray.length(); i++) {
                 products.add(new Recette(jProductArray.optJSONObject(i)));
                 Log.v("TAG","[Auteur] : " + products.get(i).getAuteur()+" "+products.get(i).getId());
-
-                /*ImageButton recette_N = findViewById(R.id.imageButton8);
-
-                recette_N.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
-                        intent.putExtra("token", token);
-                        //intent.putExtra("name",products.get(1).getAuteur());
-                        //intent.putExtra("temps",products.get(1).getTemps());
-                        startActivity(intent);
-                    }
-                });*/
-
-            }//vsrdvsrvbsrt
+            }
             return products;
         } catch (JSONException e) {
             Log.v("TAG","[JSONException] e : " + e.getMessage());
