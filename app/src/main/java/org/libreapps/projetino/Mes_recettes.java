@@ -66,11 +66,12 @@ public class Mes_recettes extends AppCompatActivity {
                 intent.putExtra("token", token);
                 intent.putExtra("name",listRecettes.get(1).getAuteur());
                 intent.putExtra("temps",listRecettes.get(1).getTemps());
+                intent.putExtra("commentaire",listRecettes.get(1).getCommentaire());
+                //intent.putExtra("ingredients",listRecettes.get(1).getIngregients());
                 startActivity(intent);
             }
         });
     }
-    //TODO reprendre le même schéma pour envoyer une information dans la fiche recette
 
     public ArrayList<Recette> parse(final String json) {
         try {

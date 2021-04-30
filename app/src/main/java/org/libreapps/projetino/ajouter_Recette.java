@@ -14,11 +14,12 @@ import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Comment;
 
 import java.util.concurrent.ExecutionException;
 
 public class ajouter_Recette extends AppCompatActivity {
-    private EditText Temps,Auteur;
+    private EditText Temps,Auteur,Commentaires,Ingredients;
     private Button Enregistrer;
     String token;
     @Override
@@ -29,6 +30,9 @@ public class ajouter_Recette extends AppCompatActivity {
 
         Temps = (EditText) findViewById(R.id.editTextTextPersonName3);
         Auteur = (EditText) findViewById(R.id.editTextTextPersonName4);
+        Commentaires = (EditText) findViewById(R.id.editTextTextPersonName8);
+        Ingredients = (EditText) findViewById(R.id.editTextTextPersonName5);
+
         Enregistrer = (Button) findViewById(R.id.button10);
 
         Enregistrer.setOnClickListener(new View.OnClickListener() {
@@ -41,8 +45,11 @@ public class ajouter_Recette extends AppCompatActivity {
 
                     Recette.put("temps", Temps.getText().toString());
                     Recette.put("auteur", Auteur.getText().toString());
+                    Recette.put("cuisine",Commentaires.getText().toString());
+                    Recette.put("ingredients",Ingredients.getText().toString());
 
-                    //TODO ne pas oublier de mettre les nouveaux paramètres dans la classe DATARecette/Recette
+                    //TODO il faudrat peut-être créer une liste pour enregistrer tous les ingrédient et ensuite intégrer les ingrédients dans la bdd
+                    //TODO Pour la cuisson on fera directement un long texte ou alors la même chose que pour les ingrédients
 
                     connectionRest.setJsonObj(Recette);
                     connectionRest.setToken(token);
