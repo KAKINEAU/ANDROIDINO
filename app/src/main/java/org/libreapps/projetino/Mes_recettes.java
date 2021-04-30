@@ -54,9 +54,10 @@ public class Mes_recettes extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        for (int k=0;k<=listRecettes.size();k++){
 
+        }
         ImageButton recette_N = findViewById(R.id.imageButton8);
-
         recette_N.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
