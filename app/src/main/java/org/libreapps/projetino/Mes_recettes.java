@@ -54,9 +54,6 @@ public class Mes_recettes extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        for (int k=0;k<=listRecettes.size();k++){
-
-        }
         ImageButton recette_N = findViewById(R.id.imageButton8);
         recette_N.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,10 +61,28 @@ public class Mes_recettes extends AppCompatActivity {
 
                 Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
                 intent.putExtra("token", token);
-                intent.putExtra("name",listRecettes.get(1).getAuteur());
-                intent.putExtra("temps",listRecettes.get(1).getTemps());
-                intent.putExtra("commentaire",listRecettes.get(1).getCommentaire());
-                //intent.putExtra("ingredients",listRecettes.get(1).getIngregients());
+                if(listRecettes.size()!=0){
+                    intent.putExtra("name",listRecettes.get(0).getAuteur());
+                    intent.putExtra("temps",listRecettes.get(0).getTemps());
+                    intent.putExtra("commentaire",listRecettes.get(0).getCommentaire());
+                    intent.putExtra("ingredients",listRecettes.get(0).getIngregients());
+                }
+                startActivity(intent);
+            }
+        });
+        ImageButton recette_2 = findViewById(R.id.imageButton9);
+        recette_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                intent.putExtra("token", token);
+                if(listRecettes.size()!=0){
+                    intent.putExtra("name",listRecettes.get(1).getAuteur());
+                    intent.putExtra("temps",listRecettes.get(1).getTemps());
+                    intent.putExtra("commentaire",listRecettes.get(1).getCommentaire());
+                    intent.putExtra("ingredients",listRecettes.get(1).getIngregients());
+                }
                 startActivity(intent);
             }
         });

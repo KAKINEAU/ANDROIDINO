@@ -9,8 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.libreapps.projetino.Compte.Data_Compte;
+import org.libreapps.projetino.DataRecette.Recette;
+
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+
 public class Menu extends AppCompatActivity {
     String token;
+    private ArrayList<Data_Compte> utilisateur = new ArrayList<>();
+    ConnectionRest connectionRest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +59,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Mon_Compte.class);
                 intent.putExtra("token", token);
+                intent.putExtra("name",utilisateur.get(0).getName());
                 startActivity(intent);
             }
         });
@@ -69,6 +80,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Decouvrir.class);
+                intent.putExtra("token", token);
                 startActivity(intent);
             }
         });
@@ -82,8 +94,6 @@ public class Menu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }
 
 }

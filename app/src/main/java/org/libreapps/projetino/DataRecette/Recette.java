@@ -9,19 +9,19 @@ public class Recette {
     private final String temps;
     private final String auteur;
     private final String commentaire;
-    private Object ingregients = new ArrayList<>();
+    private final String ingregients;
 
     public Recette(JSONObject jObject) {
         this.temps = jObject.optString("temps");
         this.auteur = jObject.optString("auteur");
         this.id = jObject.optInt("id");
         this.commentaire = jObject.optString("commentaire");
-        this.ingregients = jObject.opt("ingredients");
+        this.ingregients = jObject.optString("ingredients");
     }
 
     public String getTemps(){ return temps;}
     public String getAuteur(){ return auteur;}
     public int getId(){ return id; }
     public String getCommentaire(){ return commentaire; }
-    public Object getIngregients() { return ingregients; }
+    public String getIngregients() { return ingregients; }
 }

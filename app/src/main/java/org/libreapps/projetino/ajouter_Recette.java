@@ -45,7 +45,7 @@ public class ajouter_Recette extends AppCompatActivity {
 
                     Recette.put("temps", Temps.getText().toString());
                     Recette.put("auteur", Auteur.getText().toString());
-                    Recette.put("cuisine",Commentaires.getText().toString());
+                    Recette.put("commentaire",Commentaires.getText().toString());
                     Recette.put("ingredients",Ingredients.getText().toString());
 
                     //TODO il faudrat peut-être créer une liste pour enregistrer tous les ingrédient et ensuite intégrer les ingrédients dans la bdd
