@@ -4,17 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.JsonReader;
-import android.util.JsonWriter;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Comment;
 
 import java.util.concurrent.ExecutionException;
 
@@ -30,8 +26,8 @@ public class ajouter_Recette extends AppCompatActivity {
 
         Temps = (EditText) findViewById(R.id.editTextTextPersonName3);
         Auteur = (EditText) findViewById(R.id.editTextTextPersonName4);
-        Commentaires = (EditText) findViewById(R.id.editTextTextPersonName8);
-        Ingredients = (EditText) findViewById(R.id.editTextTextPersonName5);
+        Commentaires = (EditText) findViewById(R.id.editTextTextPersonName7);
+        Ingredients = (EditText) findViewById(R.id.editTextTextPersonName6);
 
         Enregistrer = (Button) findViewById(R.id.button10);
 
