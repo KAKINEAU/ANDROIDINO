@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -54,22 +55,37 @@ public class Mes_recettes extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        ImageButton recette_N = findViewById(R.id.imageButton8);
-        recette_N.setOnClickListener(new View.OnClickListener() {
+
+/*
+        LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout);
+        //ArrayList<ImageButton> buttons = new ArrayList<>;
+        ImageButton btn[] = new ImageButton[10];
+        for(int i = 0; i < 10; i++){
+
+            btn[i] = new ImageButton(this);
+            //optional: add your buttons to any layout if you want to see them in your screen
+            layout.addView(btn[i]);
+        }*/
+
+
+        ImageButton recette_1 = findViewById(R.id.imageButton8);
+        recette_1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
                 intent.putExtra("token", token);
                 if(listRecettes.size()!=0){
-                    intent.putExtra("name",listRecettes.get(0).getAuteur());
-                    intent.putExtra("temps",listRecettes.get(0).getTemps());
-                    intent.putExtra("commentaire",listRecettes.get(0).getCommentaire());
-                    intent.putExtra("ingredients",listRecettes.get(0).getIngregients());
+                    intent.putExtra("name",listRecettes.get(2).getAuteur());
+                    intent.putExtra("temps",listRecettes.get(2).getTemps());
+                    intent.putExtra("commentaire",listRecettes.get(2).getCommentaire());
+                    intent.putExtra("ingredients",listRecettes.get(2).getIngregients());
+                    intent.putExtra("ingredients",listRecettes.get(2).getIngregients());
                 }
                 startActivity(intent);
             }
         });
+
         ImageButton recette_2 = findViewById(R.id.imageButton9);
         recette_2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,6 +102,69 @@ public class Mes_recettes extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        ImageButton recette_3 = findViewById(R.id.imageButton10);
+        recette_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                intent.putExtra("token", token);
+                if(listRecettes.size()!=0){
+                    intent.putExtra("name",listRecettes.get(3).getAuteur());
+                    intent.putExtra("temps",listRecettes.get(3).getTemps());
+                    intent.putExtra("commentaire",listRecettes.get(3).getCommentaire());
+                    intent.putExtra("ingredients",listRecettes.get(3).getIngregients());
+                }
+                startActivity(intent);
+            }
+        });
+
+        ImageButton recette_4 = findViewById(R.id.imageButton11);
+        recette_4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                intent.putExtra("token", token);
+                if(listRecettes.size()!=0){
+                    intent.putExtra("name",listRecettes.get(4).getAuteur());
+                    intent.putExtra("temps",listRecettes.get(4).getTemps());
+                    intent.putExtra("commentaire",listRecettes.get(4).getCommentaire());
+                    intent.putExtra("ingredients",listRecettes.get(4).getIngregients());
+                }
+                startActivity(intent);
+            }
+        });
+
+        ImageButton recette_5 = findViewById(R.id.imageButton12);
+        recette_5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Mes_recettes.this,Fiche_Recette.class);
+                intent.putExtra("token", token);
+                if(listRecettes.size()!=0){
+                    intent.putExtra("name",listRecettes.get(5).getAuteur());
+                    intent.putExtra("temps",listRecettes.get(5).getTemps());
+                    intent.putExtra("commentaire",listRecettes.get(5).getCommentaire());
+                    intent.putExtra("ingredients",listRecettes.get(5).getIngregients());
+                }
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     public ArrayList<Recette> parse(final String json) {
@@ -94,7 +173,7 @@ public class Mes_recettes extends AppCompatActivity {
             final JSONArray jProductArray = new JSONArray(json);
             for (int i = 0; i < jProductArray.length(); i++) {
                 products.add(new Recette(jProductArray.optJSONObject(i)));
-                Log.v("TAG","[Auteur] : " + products.get(i).getAuteur()+" "+products.get(i).getId());
+                Log.v("TAG","[Auteur] : " + products.get(i).getAuteur()+" "+products.get(i).getId()+" "+products.get(i).getTemps()+" "+products.get(i).getCommentaire()+" "+products.get(i).getIngregients());
             }
             return products;
         } catch (JSONException e) {
