@@ -1,8 +1,10 @@
 package org.libreapps.projetino;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,8 @@ import android.widget.EditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 import java.util.concurrent.ExecutionException;
 
 public class
@@ -34,6 +38,7 @@ Connexion extends AppCompatActivity {
 
 
         Connexion_Button.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
 
@@ -51,6 +56,13 @@ Connexion extends AppCompatActivity {
                     if(token.charAt(0)=='{') {
                         Log.v("LoginActivity", token);
                     }else{
+                        /*
+                        String tab[]=token.split("\\.");
+                        byte[] data = Base64.decode(base64, Base64.DEFAULT);
+                        String text = new String(data, StandardCharsets.UTF_8);
+
+                        String payload = new String (Base64.getDecoder().decode(tab[1].getBytes()));
+                        Log.v("payload", payload );*/
                         Log.v("token", token);
                         Log.v("connexion", "menu"+token);
                         openactivity_Menu();

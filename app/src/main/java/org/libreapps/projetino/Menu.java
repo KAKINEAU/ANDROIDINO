@@ -59,7 +59,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Mon_Compte.class);
                 intent.putExtra("token", token);
-                intent.putExtra("name",utilisateur.get(0).getName());
+                //intent.putExtra("name",utilisateur.get(0).getName());
                 startActivity(intent);
             }
         });

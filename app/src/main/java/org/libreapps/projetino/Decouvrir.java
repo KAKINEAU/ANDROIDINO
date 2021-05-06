@@ -52,8 +52,11 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
-                intent.putExtra("name",listRecettes.get(0).getAuteur());
-                intent.putExtra("temps",listRecettes.get(0).getTemps());
+                intent.putExtra("name",listRecettes.get(2).getAuteur());
+                intent.putExtra("temps",listRecettes.get(2).getTemps());
+                intent.putExtra("commentaire",listRecettes.get(2).getCommentaire());
+                intent.putExtra("ingredients",listRecettes.get(2).getIngregients());
+                intent.putExtra("ingredients",listRecettes.get(2).getIngregients());
                 startActivity(intent);
             }
         });
@@ -66,6 +69,9 @@ public class Decouvrir extends AppCompatActivity {
                 intent.putExtra("token", token);
                 intent.putExtra("name",listRecettes.get(1).getAuteur());
                 intent.putExtra("temps",listRecettes.get(1).getTemps());
+                intent.putExtra("commentaire",listRecettes.get(1).getCommentaire());
+                intent.putExtra("ingredients",listRecettes.get(1).getIngregients());
+                intent.putExtra("ingredients",listRecettes.get(1).getIngregients());
                 startActivity(intent);
             }
         });
@@ -76,8 +82,11 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
-                intent.putExtra("name",listRecettes.get(2).getAuteur());
-                intent.putExtra("temps",listRecettes.get(2).getTemps());
+                intent.putExtra("name",listRecettes.get(3).getAuteur());
+                intent.putExtra("temps",listRecettes.get(3).getTemps());
+                intent.putExtra("commentaire",listRecettes.get(3).getCommentaire());
+                intent.putExtra("ingredients",listRecettes.get(3).getIngregients());
+                intent.putExtra("ingredients",listRecettes.get(3).getIngregients());
                 startActivity(intent);
             }
         });
@@ -88,8 +97,11 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
-                intent.putExtra("name",listRecettes.get(3).getAuteur());
-                intent.putExtra("temps",listRecettes.get(3).getTemps());
+                intent.putExtra("name",listRecettes.get(4).getAuteur());
+                intent.putExtra("temps",listRecettes.get(4).getTemps());
+                intent.putExtra("commentaire",listRecettes.get(4).getCommentaire());
+                intent.putExtra("ingredients",listRecettes.get(4).getIngregients());
+                intent.putExtra("ingredients",listRecettes.get(4).getIngregients());
                 startActivity(intent);
             }
         });
@@ -100,11 +112,15 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
-                intent.putExtra("name",listRecettes.get(4).getAuteur());
-                intent.putExtra("temps",listRecettes.get(4).getTemps());
+                intent.putExtra("name",listRecettes.get(5).getAuteur());
+                intent.putExtra("temps",listRecettes.get(5).getTemps());
+                intent.putExtra("commentaire",listRecettes.get(5).getCommentaire());
+                intent.putExtra("ingredients",listRecettes.get(5).getIngregients());
+                intent.putExtra("ingredients",listRecettes.get(5).getIngregients());
                 startActivity(intent);
             }
         });
+        /*
         ImageButton Boutonimage6 = findViewById(R.id.imageButton18);
 
         Boutonimage6.setOnClickListener(new View.OnClickListener(){
@@ -153,6 +169,8 @@ public class Decouvrir extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        */
+
     }
     public ArrayList<Recette> parse(final String json) {
         try {

@@ -50,21 +50,26 @@
                     android:layout_height="140dp"
                     android:contentDescription="TODO"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@color/purple_200" />
+                    app:srcCompat="@drawable/pommesdeterreaufoursauceciboulette_280x200"
+                    tools:srcCompat="@drawable/pommesdeterreaufoursauceciboulette_280x200" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:contentDescription="TODO"
-                    app:srcCompat="@color/purple_500" />
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/oeuf_au_plat"
+                    tools:srcCompat="@drawable/oeuf_au_plat" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="126dp"
                     android:layout_height="match_parent"
                     android:contentDescription="TODO"
-                    app:srcCompat="@color/purple_700" />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/_1162_w600"
+                    tools:srcCompat="@drawable/_1162_w600" />
             </TableRow>
 
             <TableRow
@@ -76,15 +81,18 @@
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:contentDescription="TODO"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@color/purple_200" />
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/i6417_chevre_chaud_sur_toast"
+                    tools:srcCompat="@drawable/i6417_chevre_chaud_sur_toast" />
 
                 <ImageButton
                     android:id="@+id/imageButton17"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:contentDescription="TODO"
-                    app:srcCompat="@color/purple_500" />
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/i12947_omelette_simple"
+                    tools:srcCompat="@drawable/i12947_omelette_simple" />
 
                 <ImageButton
                     android:id="@+id/imageButton18"
