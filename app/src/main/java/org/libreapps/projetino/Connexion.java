@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -14,14 +15,16 @@ import android.widget.EditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
-import java.util.Base64;
+
 import java.util.concurrent.ExecutionException;
 
 public class
 Connexion extends AppCompatActivity {
     private Button Inscrip,Connexion_Button;
     private EditText userEmail,userPassword;
+    String Nom_utilisateur;
     String token;
 
     @Override
@@ -56,13 +59,16 @@ Connexion extends AppCompatActivity {
                     if(token.charAt(0)=='{') {
                         Log.v("LoginActivity", token);
                     }else{
-                        /*
                         String tab[]=token.split("\\.");
-                        byte[] data = Base64.decode(base64, Base64.DEFAULT);
-                        String text = new String(data, StandardCharsets.UTF_8);
-
-                        String payload = new String (Base64.getDecoder().decode(tab[1].getBytes()));
-                        Log.v("payload", payload );*/
+                        int flag = Base64.URL_SAFE;
+                        byte[] tmp2 = Base64.decode(tab[1],flag);
+                        String val2 = new String(tmp2,"UTF-8");
+                        Log.v("payload",val2);
+                        String[] separated = val2.split("name\":\"");
+                        String temp3 = separated[1];
+                        String[] sep = temp3.split("\"");
+                        Log.v("payload",sep[0]);
+                        Nom_utilisateur = sep[0];
                         Log.v("token", token);
                         Log.v("connexion", "menu"+token);
                         openactivity_Menu();
@@ -72,6 +78,8 @@ Connexion extends AppCompatActivity {
                 } catch (InterruptedException  e) {
                     e.printStackTrace();
                 } catch (ExecutionException e) {
+                    e.printStackTrace();
+                } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
 
@@ -94,7 +102,9 @@ Connexion extends AppCompatActivity {
     }
     public void openactivity_Menu(){
         Intent intent = new Intent (Connexion.this, Menu.class);
+
         intent.putExtra("token", token);
+        intent.putExtra("name",Nom_utilisateur);
         startActivity(intent);
     }
 }

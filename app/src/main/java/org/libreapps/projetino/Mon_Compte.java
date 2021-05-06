@@ -33,9 +33,9 @@ public class Mon_Compte extends AppCompatActivity {
         setContentView(R.layout.activity_mon__compte);
         token = getIntent().getStringExtra("token");
 
-        String nom_utilisateur = getIntent().getStringExtra("name");
+        String Nom_utilisateur = getIntent().getStringExtra("name");
         nom_Compte = (TextView) findViewById(R.id.nom_compte);
-        nom_Compte.setText(nom_utilisateur);
+        nom_Compte.setText(Nom_utilisateur);
 
         //transition page de déconnexion
         btthome = findViewById(R.id.button4);
