@@ -19,11 +19,11 @@
 
             <ImageView
                 android:id="@+id/imageView7"
-                android:layout_width="185dp"
+                android:layout_width="match_parent"
                 android:layout_height="203dp"
                 android:layout_marginTop="80dp"
                 android:layout_marginBottom="15dp"
-                app:srcCompat="@android:mipmap/sym_def_app_icon" />
+                app:srcCompat="@drawable/logo" />
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
@@ -117,7 +117,8 @@
                 android:id="@+id/button10"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Enregistrer" />
+                android:text="Enregistrer"
+                app:backgroundTint="#FF5722" />
         </LinearLayout>
     </ScrollView>
 

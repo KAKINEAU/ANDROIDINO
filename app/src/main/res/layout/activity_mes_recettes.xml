@@ -6,14 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".Mes_recettes">
 
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="154dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
         android:text="Mes recettes :"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="2dp" />
+        app:layout_constraintEnd_toStartOf="@+id/fab"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
@@ -21,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:rotation="45"
+        app:backgroundTint="#C8FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
@@ -29,7 +41,7 @@
         android:id="@+id/scrollView2"
         android:layout_width="407dp"
         android:layout_height="675dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10">
@@ -41,14 +53,14 @@
             android:orientation="vertical">
 
 
-                        <ImageButton
-                            android:id="@+id/imageButton8"
-                            android:layout_width="match_parent"
-                            android:layout_height="150dp"
-                            android:cropToPadding="true"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/pommesdeterreaufoursauceciboulette_280x200"
-                            tools:srcCompat="@drawable/pommesdeterreaufoursauceciboulette_280x200" />
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:cropToPadding="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pommesdeterreaufoursauceciboulette_280x200"
+                tools:srcCompat="@drawable/pommesdeterreaufoursauceciboulette_280x200" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
@@ -83,6 +95,6 @@
                 tools:srcCompat="@drawable/i12947_omelette_simple" />
 
         </LinearLayout>
-                </ScrollView>
+    </ScrollView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

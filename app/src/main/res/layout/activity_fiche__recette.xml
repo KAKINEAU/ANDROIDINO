@@ -6,29 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".Fiche_Recette">
 
-    <ImageButton
-        android:id="@+id/imageButton7"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="139dp"
+        android:layout_height="139dp"
         android:layout_marginTop="70dp"
-        android:contentDescription="TODO"
-        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@color/purple_200" />
+        tools:srcCompat="@drawable/cuistot" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="326dp"
         android:layout_height="19dp"
-        android:layout_marginTop="20dp"
         android:layout_marginBottom="21dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton7">
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView27"
@@ -116,4 +112,5 @@
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

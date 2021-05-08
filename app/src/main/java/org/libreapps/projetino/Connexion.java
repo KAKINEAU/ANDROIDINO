@@ -67,11 +67,19 @@ Connexion extends AppCompatActivity {
                         String[] separated = val2.split("name\":\"");
                         String temp3 = separated[1];
                         String[] sep = temp3.split("\"");
-                        Log.v("payload",sep[0]);
+                        Log.v("Nom utilisateur",sep[0]);
                         Nom_utilisateur = sep[0];
                         Log.v("token", token);
                         Log.v("connexion", "menu"+token);
-                        openactivity_Menu();
+
+                        Intent intent = new Intent (Connexion.this, Menu.class);
+                        //Log.v("Nom du compte", Nom_utilisateur);
+                        intent.putExtra("token", token);
+                        intent.putExtra("Nomcompte",Nom_utilisateur);
+                        startActivity(intent);
+
+
+                        //openactivity_Menu(Nom_utilisateur);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -100,11 +108,11 @@ Connexion extends AppCompatActivity {
         intent1.putExtra("token", token);
         startActivity(intent1);
     }
-    public void openactivity_Menu(){
+    public void openactivity_Menu(String Nom_compte){
         Intent intent = new Intent (Connexion.this, Menu.class);
-
+        Log.v("Nom du compte", Nom_compte);
         intent.putExtra("token", token);
-        intent.putExtra("name",Nom_utilisateur);
+        intent.putExtra("Nomcompte",Nom_compte);
         startActivity(intent);
     }
 }

@@ -19,7 +19,7 @@ import java.util.concurrent.ExecutionException;
 
 public class Menu extends AppCompatActivity {
     String token;
-    private ArrayList<Data_Compte> utilisateur = new ArrayList<>();
+
     ConnectionRest connectionRest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class Menu extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
         token = getIntent().getStringExtra("token");
         Log.v("token", "menu  "+token);
+        String nomcompte = getIntent().getStringExtra("Nomcompte");
 
         //transition page de déconnexion
         Button Deconnexion = findViewById(R.id.button9);
@@ -59,7 +60,8 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Mon_Compte.class);
                 intent.putExtra("token", token);
-                //intent.putExtra("name",utilisateur.get(0).getName());
+
+                intent.putExtra("Nom_utilisateur",nomcompte);
                 startActivity(intent);
             }
         });
@@ -70,6 +72,7 @@ public class Menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Menu.this, Recettes_de_saison.class);
+                intent.putExtra("token", token);
                 startActivity(intent);
             }
         });

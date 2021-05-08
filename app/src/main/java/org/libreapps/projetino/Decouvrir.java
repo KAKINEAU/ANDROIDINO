@@ -52,6 +52,7 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
+                intent.putExtra("resId",R.drawable.pommesdeterreaufoursauceciboulette_280x200);
                 intent.putExtra("name",listRecettes.get(2).getAuteur());
                 intent.putExtra("temps",listRecettes.get(2).getTemps());
                 intent.putExtra("commentaire",listRecettes.get(2).getCommentaire());
@@ -67,6 +68,7 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
+                intent.putExtra("resId",R.drawable.oeuf_au_plat);
                 intent.putExtra("name",listRecettes.get(1).getAuteur());
                 intent.putExtra("temps",listRecettes.get(1).getTemps());
                 intent.putExtra("commentaire",listRecettes.get(1).getCommentaire());
@@ -82,6 +84,7 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
+                intent.putExtra("resId",R.drawable._1162_w600);
                 intent.putExtra("name",listRecettes.get(3).getAuteur());
                 intent.putExtra("temps",listRecettes.get(3).getTemps());
                 intent.putExtra("commentaire",listRecettes.get(3).getCommentaire());
@@ -97,6 +100,7 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
+                intent.putExtra("resId",R.drawable.i6417_chevre_chaud_sur_toast);
                 intent.putExtra("name",listRecettes.get(4).getAuteur());
                 intent.putExtra("temps",listRecettes.get(4).getTemps());
                 intent.putExtra("commentaire",listRecettes.get(4).getCommentaire());
@@ -112,6 +116,7 @@ public class Decouvrir extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Decouvrir.this, Fiche_Recette.class);
                 intent.putExtra("token", token);
+                intent.putExtra("resId",R.drawable.i12947_omelette_simple);
                 intent.putExtra("name",listRecettes.get(5).getAuteur());
                 intent.putExtra("temps",listRecettes.get(5).getTemps());
                 intent.putExtra("commentaire",listRecettes.get(5).getCommentaire());

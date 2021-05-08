@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -17,11 +18,13 @@ public class Fiche_Recette extends AppCompatActivity {
         token = getIntent().getStringExtra("token");
         Log.v("result", " "+token );
 
+        int resid= getIntent().getExtras().getInt("resId");
         String name = getIntent().getStringExtra("name");
         String temps = getIntent().getStringExtra("temps");
         String commentaire = getIntent().getStringExtra("commentaire");
         String ingredients = getIntent().getStringExtra("ingredients");
 
+        ImageView image =(ImageView) findViewById(R.id.imageView8);
         TextView auteur = (TextView) findViewById(R.id.textView40);
         TextView tempspreparation = (TextView) findViewById(R.id.textView39);
         TextView ingredient = (TextView) findViewById(R.id.textView18);
@@ -31,6 +34,7 @@ public class Fiche_Recette extends AppCompatActivity {
         tempspreparation.setText(temps);
         ingredient.setText(ingredients);
         commentaires.setText(commentaire);
+        image.setImageResource(resid);
 
         //TODO ajouter l'affichage des commentaire ainsi que des ingrédients
 
