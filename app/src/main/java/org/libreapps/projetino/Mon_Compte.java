@@ -35,8 +35,6 @@ public class Mon_Compte extends AppCompatActivity {
         nom_Compte = (TextView) findViewById(R.id.nom_compte1);
         nom_Compte.setText(Nom_utilisateur);
 
-
-
         try{
             connectionRest = new ConnectionRest();
             connectionRest.setToken(token);
@@ -51,10 +49,6 @@ public class Mon_Compte extends AppCompatActivity {
         } catch (ExecutionException e) {
             e.printStackTrace();
         }
-
-
-
-
         ImageButton recette_4 = findViewById(R.id.imageButton7);
         recette_4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +76,8 @@ public class Mon_Compte extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Mon_Compte.this, Menu.class);
+                intent.putExtra("token", token);
+                intent.putExtra("Nomcompte", Nom_utilisateur);
                 startActivity(intent);
             }
         });

@@ -18,11 +18,13 @@ public class ajouter_Recette extends AppCompatActivity {
     private EditText Temps,Auteur,Commentaires,Ingredients;
     private Button Enregistrer;
     String token;
+    String Nom_utilisateur;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajouter__recette);
         token = getIntent().getStringExtra("token");
+        Nom_utilisateur = getIntent().getStringExtra("Nom_utilisateur");
 
         Temps = (EditText) findViewById(R.id.editTextTextPersonName3);
         Auteur = (EditText) findViewById(R.id.editTextTextPersonName4);
@@ -43,9 +45,6 @@ public class ajouter_Recette extends AppCompatActivity {
                     Recette.put("auteur", Auteur.getText().toString());
                     Recette.put("commentaire",Commentaires.getText().toString());
                     Recette.put("ingredients",Ingredients.getText().toString());
-
-                    //TODO il faudrat peut-être créer une liste pour enregistrer tous les ingrédient et ensuite intégrer les ingrédients dans la bdd
-                    //TODO Pour la cuisson on fera directement un long texte ou alors la même chose que pour les ingrédients
 
                     connectionRest.setJsonObj(Recette);
                     connectionRest.setToken(token);
