@@ -56,7 +56,7 @@ public class inscription extends AppCompatActivity {
                     if(token.charAt(0)=='{'){
                         Log.v("LoginActivity",token);
                     }else{
-                        Intent intent = new Intent(inscription.this, Menu.class);
+                        Intent intent = new Intent(inscription.this, Connexion.class);
                         intent.putExtra("token",token);
                         startActivity(intent);
                     }
